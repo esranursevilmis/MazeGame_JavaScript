@@ -5,3 +5,5 @@ Oyun içeriğinde birden çok nesne bulunuyor. Ve bu nesneler tüm yaygın taray
 Oyunun web linki aşağıda bulunmaktadır:
 http://esranursevilmis.eu5.org/
 
+
+![oyun](https://github.com/esranursevilmis/MazeGame_JavaScript/assets/92573290/82c5d043-7566-485b-92cd-1530598d7c38)
