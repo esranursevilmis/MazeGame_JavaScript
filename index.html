@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--Bu etiketin içinde sayfanın görünümünü ve birbiriyle uyumunu belirlediğim CSS kodları bulunuyor.-->
+    <style>
+      h1{ 
+        text-align: center;
+        background-color: #a59e9a;
+        color: #F8F8F8;
+        width: 40%;
+        margin-left:auto; margin-right:auto; margin-bottom: -10px; }
+        
+        p{text-align: center;
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        body {background-color: rgb(125, 154, 205); }
+        
+        a{
+          color: #513f35;
+          background-color: antiquewhite; 
+          font-size: 25px;
+          display: block;
+          text-align: center;
+          margin: auto;
+          width:25%;
+          margin-top:10px;
+        }
+        
+        canvas {
+      display: block;
+      margin:auto;
+      border: 6px solid #000000; }
+      
+.game{
+  display: auto;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background: rgba(119, 78, 78, 0.75); 
+  margin-left: auto;
+  margin-right: auto;
+  width:25%;
+  margin-bottom: 10px; }
+  
+  .time{
+    color: #fff;
+  text-align:center; 
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  display: auto;
+  background: rgba(119, 78, 78, 0.75);
+  width:25%;
+  margin-top:10px; }
+  
+  </style>
+  </head>
+  <body>
+    <h1>MAZE GAME</h1>
+    <!--Oyunu açıklayan metin. -->
+    <p style="font-family:cursive;">There is a dog which wants reach the bone.<br>
+      You have to use the right, left, up and down keys on the keyboard to move the dog.<br>
+      You have 30 seconds for this. Hurry up! Good luck :D</p>
+      <div class="game"><!-- bu div etiketi ise oyun sonlandığında oyuncuya iletilen mesajın
+         içeriğini ve kaç adım attığını gösteriyor-->
+        <div class="winMessage" style=" display:none;">YOU WIN!</div>
+        <div class="timeMessage" style=" display:none;">TIME IS UP!</div>
+        <div>Moves: <span>0</span></div>
+      </div><!-- Kalan zaman ve yeniden oynama seçeneği bulunduran etiket.-->
+      <canvas id="myCanvas"></canvas>
+      <div class="time" id="timer" ></div>
+      <a href="index.html" target="_self" >Play Again</a>
+      <script src ="oyun.js"></script>
+    </body>
+    </html>
+    
