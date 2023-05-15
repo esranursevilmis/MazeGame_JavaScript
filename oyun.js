@@ -96,7 +96,7 @@ function move(x, y) {
   player.x = player.newX;
   player.y = player.newY;
 
-  moves = moves + 1;
+  moves = moves + 1; //her harekette adım arttırılır.
   document.querySelector("span").innerHTML = moves;
 }
 
@@ -114,17 +114,20 @@ function checkColl() { //bu fonksiyon geçtiğimiz her ücrenin duvar, kaldırı
       let b = collbox[i][j];
       if (player.newX === b.x && player.newY === b.y) {
         if (b.status === 0) {
-          console.log("Hit Rock");//tuğlaya çarptığımızda hiçbir hareket yapılmaz 
-        } else if (b.status === 2) {
+          console.log("Hit Rock");//tuğlaya çarptığımızda hiçbir hareket yapılmaz.
+        } 
+        else if (b.status === 2) {
           console.log("WIN");
           isGameOver = true;//kemiğe ulaşıldığı için oyunun bitme durumu güncellenir.
           move(player.newX, player.newY);
           document.querySelector(".winMessage").style.display = "block";//kullanıcıya bilgi verilir.
-        } else if (player.newX < 0 || player.newX > 600 ||
+        }
+        else if (player.newX < 0 || player.newX > 600 ||
                    player.newY < 0 || player.newY > 600 ){
           //oyuncu canvas alanında matris içinden çıkmamalıdır.
           console.log("Hit Wall");
-        } else {
+        }
+        else {
           if (!isGameOver) {
             move(player.newX, player.newY); //eğer oyun bitmediyse yolda ilerlemeye devam edilir.
           }
@@ -140,7 +143,7 @@ let timer = setInterval(function() {
   document.getElementById("timer").innerHTML = "Game ends in: "+secondsLeft+" seconds";//kalan her saniye burada gösterilir.
   if (secondsLeft === 0) {
     clearInterval(timer); //zamanlayıcı durdurulur 
-    isGameOver=true;//süre dolmuştur ve isGameOver durumu true olarak ayarlanır.
+    isGameOver=true;//süre dolmuştur ve isGameOver durumu true olarak ayarlanır.ve bir daha hareket edilemez.
     if(isGameOver){
      document.querySelector(".timeMessage").style.display = "block"; } //oyuncuya bilgi verilir.
   }
